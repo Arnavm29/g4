@@ -1,0 +1,149 @@
+/* style.css */
+
+/* Global styles */
+body {
+    font-family: sans-serif;
+    background-color: #f0f5eb;
+    color: #4a5f46;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('images/background');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Shared max-width variable*/
+:root {
+    --max-width: 800px;
+}
+
+/* Navigation Styles */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-bottom: 15px;
+    background-color: rgba(240, 245, 235, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.nav-button {
+    text-decoration: none;
+    background-color: #e1e6d3;
+    color: #4a5f46;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: #d6dac9;
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
+.nav-text {
+    color: #7c996d;
+    font-size: 1.1em;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 15px;
+}
+
+/* Content Styles */
+.content {
+    width: 100%;
+    max-width: var(--max-width);
+    background-color: rgba(240, 245, 235, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Heading Styles */
+h3 {
+    color: #5f745a;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Text Styles*/
+em {
+    display: block;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(240, 245, 235, 0.9); /* Added table background color */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: var(--max-width);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #d6dac9;
+}
+
+/* Table header */
+thead {
+    background-color: #d6dac9;
+    color: #5f745a;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* Table body */
+tbody tr:nth-child(even) {
+    background-color: #e1e6d3;
+}
+
+/* Table footer */
+tfoot {
+    background-color: #d6dac9;
+    font-style: italic;
+    text-align: center;
+}
+
+tfoot td {
+    border-bottom: none;
+    padding: 15px;
+}
