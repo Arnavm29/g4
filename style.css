@@ -1,6 +1,4 @@
-/* style.css */
 
-/* Global styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f5eb;
@@ -25,12 +23,10 @@ html {
     padding: 0;
 }
 
-/* Shared max-width variable*/
 :root {
     --max-width: 700px;
 }
 
-/* Navigation Styles */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -43,6 +39,7 @@ html {
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
+    flex-wrap: nowrap;
 }
 
 .nav-button {
@@ -75,9 +72,11 @@ html {
     flex-grow: 1;
     margin: 0 20px;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* Content Styles */
 .content {
     width: 100%;
     max-width: var(--max-width);
@@ -91,7 +90,6 @@ html {
     justify-content: center;
 }
 
-/* Heading Styles */
 h3 {
     color: #5f745a;
     margin-bottom: 15px;
@@ -99,7 +97,6 @@ h3 {
     font-weight: 600;
 }
 
-/* Text Styles*/
 em {
     display: block;
     margin-bottom: 10px;
@@ -112,7 +109,6 @@ em strong {
 }
 
 
-/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -120,7 +116,7 @@ table {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: var(--max-width);
+    max-width: var(--max-width); 
     box-sizing: border-box;
     text-align: center;
 }
@@ -131,7 +127,6 @@ th, td {
     border-bottom: 1px solid #d6dac9;
 }
 
-/* Table header */
 thead {
     background-color: #d6dac9;
     color: #5f745a;
@@ -141,12 +136,10 @@ th {
     font-weight: 600;
 }
 
-/* Table body */
 tbody tr:nth-child(even) {
     background-color: #e1e6d3;
 }
 
-/* Table footer */
 tfoot {
     background-color: #d6dac9;
     font-style: italic;
@@ -159,44 +152,44 @@ tfoot td {
 }
 
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     :root {
-        --max-width: 95%; /* Expand content to almost full screen on mobile */
+        --max-width: 95%;
     }
     .navigation {
-        flex-direction: column; /* Stack navigation items */
         padding: 10px;
-        margin-bottom: 15px; /* Reduce margin for mobile */
-        align-items: center; /* Center items in the navigation bar */
+        margin-bottom: 15px;
+        align-items: center;
+
     }
 
     .nav-button {
-       font-size: 1em; /* Make buttons smaller */
-       padding: 8px 12px; /* Smaller padding for buttons */
-       margin: 5px; /* add some space to the buttons*/
-
+       font-size: 1em;
+       padding: 8px 12px;
+        margin: 5px;
     }
 
      .nav-text {
-        font-size: 1.1em; /* Slightly smaller text */
-        margin: 10px 0; /* Less margin for text */
-        text-align: center; /* Center navigation text on mobile */
+        font-size: 1.1em;
+        margin: 10px 0;
+        text-align: center;
      }
    .content {
         padding: 20px;
    }
     h3 {
-        font-size: 1.4em; /* Smaller h3 on mobile */
+        font-size: 1.4em;
     }
     em {
-        font-size: 1em; /* Smaller text on mobile */
+        font-size: 1em;
     }
      table {
-        font-size: 0.9em; /* Smaller table text on mobile */
+         max-width: var(--max-width); 
+         font-size: 0.9em;
+         box-sizing: border-box; 
      }
       th, td {
-          padding: 10px; /* Smaller padding for cells on mobile */
+          padding: 10px;
      }
 }
 
@@ -212,16 +205,17 @@ tfoot td {
         padding: 15px;
    }
       h3 {
-        font-size: 1.2em; /* Even Smaller h3 on smaller mobile */
+        font-size: 1.2em;
     }
      em {
-        font-size: 0.9em; /* Even Smaller text on smaller mobile */
+        font-size: 0.9em;
     }
       table {
-        font-size: 0.8em; /* Even Smaller table text on smaller mobile */
+          max-width: var(--max-width); 
+         font-size: 0.8em;
+         box-sizing: border-box; 
      }
        th, td {
           padding: 8px;
      }
-
 }
