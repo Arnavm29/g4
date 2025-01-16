@@ -2,7 +2,7 @@
 
 /* Global styles */
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f0f5eb;
     color: #4a5f46;
     margin: 0;
@@ -27,7 +27,7 @@ html {
 
 /* Shared max-width variable*/
 :root {
-    --max-width: 800px;
+    --max-width: 700px;
 }
 
 /* Navigation Styles */
@@ -37,10 +37,10 @@ html {
     align-items: center;
     width: 100%;
     max-width: var(--max-width);
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     background-color: rgba(240, 245, 235, 0.9);
-    padding: 10px;
-    border-radius: 8px;
+    padding: 15px;
+    border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -50,10 +50,10 @@ html {
     background-color: #e1e6d3;
     color: #4a5f46;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 7px;
     transition: background-color 0.3s ease;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 .nav-button:hover {
@@ -70,10 +70,11 @@ html {
 
 .nav-text {
     color: #7c996d;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-align: center;
     flex-grow: 1;
-    margin: 0 15px;
+    margin: 0 20px;
+    font-weight: 600;
 }
 
 /* Content Styles */
@@ -81,8 +82,8 @@ html {
     width: 100%;
     max-width: var(--max-width);
     background-color: rgba(240, 245, 235, 0.9);
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 30px;
     box-sizing: border-box;
     text-align: center;
     display: flex;
@@ -93,30 +94,39 @@ html {
 /* Heading Styles */
 h3 {
     color: #5f745a;
-    margin: 0;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 
 /* Text Styles*/
 em {
     display: block;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    font-size: 1.1em;
+    font-weight: 400;
 }
+em strong {
+    font-weight: 600;
+}
+
 
 /* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: rgba(240, 245, 235, 0.9); /* Added table background color */
-    border-radius: 8px;
+    background-color: rgba(240, 245, 235, 0.9);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: var(--max-width);
     box-sizing: border-box;
     text-align: center;
 }
 
 th, td {
-    padding: 12px;
+    padding: 15px;
     text-align: center;
     border-bottom: 1px solid #d6dac9;
 }
@@ -128,7 +138,7 @@ thead {
 }
 
 th {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* Table body */
@@ -146,4 +156,72 @@ tfoot {
 tfoot td {
     border-bottom: none;
     padding: 15px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    :root {
+        --max-width: 95%; /* Expand content to almost full screen on mobile */
+    }
+    .navigation {
+        flex-direction: column; /* Stack navigation items */
+        padding: 10px;
+        margin-bottom: 15px; /* Reduce margin for mobile */
+        align-items: center; /* Center items in the navigation bar */
+    }
+
+    .nav-button {
+       font-size: 1em; /* Make buttons smaller */
+       padding: 8px 12px; /* Smaller padding for buttons */
+       margin: 5px; /* add some space to the buttons*/
+
+    }
+
+     .nav-text {
+        font-size: 1.1em; /* Slightly smaller text */
+        margin: 10px 0; /* Less margin for text */
+        text-align: center; /* Center navigation text on mobile */
+     }
+   .content {
+        padding: 20px;
+   }
+    h3 {
+        font-size: 1.4em; /* Smaller h3 on mobile */
+    }
+    em {
+        font-size: 1em; /* Smaller text on mobile */
+    }
+     table {
+        font-size: 0.9em; /* Smaller table text on mobile */
+     }
+      th, td {
+          padding: 10px; /* Smaller padding for cells on mobile */
+     }
+}
+
+@media (max-width: 480px){
+    :root {
+        --max-width: 98%;
+    }
+
+      .nav-text {
+        font-size: 1em;
+     }
+    .content {
+        padding: 15px;
+   }
+      h3 {
+        font-size: 1.2em; /* Even Smaller h3 on smaller mobile */
+    }
+     em {
+        font-size: 0.9em; /* Even Smaller text on smaller mobile */
+    }
+      table {
+        font-size: 0.8em; /* Even Smaller table text on smaller mobile */
+     }
+       th, td {
+          padding: 8px;
+     }
+
 }
