@@ -27,7 +27,7 @@ html {
 
 /* Shared max-width variable*/
 :root {
-    --max-width: 700px;
+    --max-width: 800px; /* Slightly wider max-width */
 }
 
 /* Navigation Styles */
@@ -37,10 +37,10 @@ html {
     align-items: center;
     width: 100%;
     max-width: var(--max-width);
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* More bottom margin */
     background-color: rgba(240, 245, 235, 0.9);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px; /* More padding in navigation */
+    border-radius: 12px; /* Slightly more pronounced border-radius */
     box-sizing: border-box;
     text-align: center;
     flex-wrap: nowrap;
@@ -50,10 +50,10 @@ html {
     text-decoration: none;
     background-color: #e1e6d3;
     color: #4a5f46;
-    padding: 10px 15px;
-    border-radius: 7px;
+    padding: 12px 18px; /* Slightly larger button padding */
+    border-radius: 8px; /* Slightly more rounded button */
     transition: background-color 0.3s ease;
-    font-size: 1.1em;
+    font-size: 1.2em; /* Slightly bigger button text */
     font-weight: 500;
 }
 
@@ -71,10 +71,10 @@ html {
 
 .nav-text {
     color: #7c996d;
-    font-size: 1.2em;
+    font-size: 1.4em; /* Larger nav text */
     text-align: center;
     flex-grow: 1;
-    margin: 0 20px;
+    margin: 0 25px; /* More margin around the text */
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
@@ -86,8 +86,8 @@ html {
     width: 100%;
     max-width: var(--max-width);
     background-color: rgba(240, 245, 235, 0.9);
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 12px; /* More pronounced border-radius */
+    padding: 35px; /* More padding in content */
     box-sizing: border-box;
     text-align: center;
     display: flex;
@@ -98,17 +98,17 @@ html {
 /* Heading Styles */
 h3 {
     color: #5f745a;
-    margin-bottom: 15px;
-    font-size: 1.6em;
+    margin-bottom: 20px;  /* Larger bottom margin for headings */
+    font-size: 1.8em; /* Larger headings */
     font-weight: 600;
 }
 
 /* Text Styles*/
 em {
     display: block;
-    margin-bottom: 10px;
-    line-height: 1.7;
-    font-size: 1.1em;
+    margin-bottom: 15px; /* More bottom margin */
+    line-height: 1.8; /* Increased line-height */
+    font-size: 1.2em; /* More font size*/
     font-weight: 400;
 }
 em strong {
@@ -121,7 +121,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     background-color: rgba(240, 245, 235, 0.9);
-    border-radius: 10px;
+    border-radius: 12px; /* More pronounced border-radius */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: var(--max-width);
@@ -130,9 +130,10 @@ table {
 }
 
 th, td {
-    padding: 15px;
+    padding: 18px; /* More space in the cells */
     text-align: center;
     border-bottom: 1px solid #d6dac9;
+    font-size: 1.1em;
 }
 
 /* Table header */
@@ -159,7 +160,7 @@ tfoot {
 
 tfoot td {
     border-bottom: none;
-    padding: 15px;
+    padding: 18px;
 }
 
 /* Species Styles */
@@ -167,43 +168,42 @@ tfoot td {
     width: 100%;
     max-width: var(--max-width);
     background-color: rgba(240, 245, 235, 0.9);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 12px; /* More pronounced border-radius */
+    padding: 25px; /* More padding inside species container */
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 25px;  /* More bottom margin */
 }
 
 .species-name {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* More margin below the name */
     text-align: center;
 }
 
 .species-name h2 {
     margin: 0;
     color: #5f745a;
-    font-size: 1.8em;
+    font-size: 2em;  /* Larger species names */
     font-weight: 600;
 }
 
 .species-content {
     display: flex;
-    align-items: center; /* Vertically center items */
-     text-align: left;
+    align-items: center;
+    text-align: left;
 }
 
 .species-image {
     flex: 1;
     text-align: left;
     order: -1;
-    display: flex;  /*Use flexbox to align the items to the middle */
+    display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .species-description {
     flex: 2;
-    padding-left: 20px;
+    padding-left: 25px; /* More left padding */
     text-align: left;
 }
 
@@ -211,7 +211,7 @@ tfoot td {
 .species-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px; /* Slightly more pronounced image radius*/
 }
 
 
@@ -221,65 +221,66 @@ tfoot td {
         --max-width: 95%;
     }
     .navigation {
-        padding: 10px;
-        margin-bottom: 15px;
+        padding: 12px; /* More padding in navigation */
+        margin-bottom: 20px; /* Less margin in mobile */
         align-items: center;
     }
 
     .nav-button {
-        font-size: 1em;
-        padding: 8px 12px;
-        margin: 5px;
+        font-size: 1.1em;
+        padding: 10px 15px; /* More padding in the nav buttons*/
+        margin: 6px; /* more margin for nav buttons */
     }
 
     .nav-text {
-        font-size: 1.1em;
+        font-size: 1.3em;
         margin: 10px 0;
         text-align: center;
     }
     .content {
-        padding: 20px;
-    }
+        padding: 25px;  /* More padding in content on mobile */
+   }
     h3 {
-        font-size: 1.4em;
+        font-size: 1.5em; /* Increased the size of heading in mobile */
+     margin-bottom: 15px;
     }
     em {
-        font-size: 1em;
+        font-size: 1.1em; /* Increased the size of normal text in mobile*/
+         margin-bottom: 10px;
     }
-    table {
+     table {
         max-width: var(--max-width);
-        font-size: 0.9em;
+        font-size: 1em;
         box-sizing: border-box;
-    }
-    th, td {
-        padding: 10px;
-    }
+     }
+      th, td {
+          padding: 12px; /* More padding in the table cells*/
+     }
 
     .species-container {
-        padding: 15px;
+        padding: 20px; /* More padding in species container*/
+        margin-bottom: 20px;
     }
     .species-name {
-        margin-bottom: 15px;
-    }
+          margin-bottom: 20px;
+     }
 
     .species-name h2 {
-        font-size: 1.5em;
-    }
-
+        font-size: 1.7em; /* Increase heading size */
+     }
+     .species-description{
+       padding-left: 15px; /* more padding left*/
+     }
     .species-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-    }
-    .species-description {
-        padding-left: 0;
         text-align: center;
     }
         .species-image {
             text-align: center;
             margin-top: 10px;
             order: initial;
-             display: block;  /* Reset flex display for mobile */
+             display: block;
         }
 
 }
@@ -290,33 +291,44 @@ tfoot td {
     }
 
     .nav-text {
-        font-size: 1em;
+        font-size: 1.2em; /* More size for navigation in smaller mobile */
     }
     .content {
-        padding: 15px;
-    }
+        padding: 20px; /* More padding in mobile*/
+   }
     h3 {
-        font-size: 1.2em;
+        font-size: 1.4em;
+         margin-bottom: 10px;
     }
     em {
-        font-size: 0.9em;
+        font-size: 1.0em; /* More font size in mobile*/
+         margin-bottom: 8px;
     }
     table {
         max-width: var(--max-width);
-        font-size: 0.8em;
+        font-size: 0.9em; /* More size for table in smaller mobile */
         box-sizing: border-box;
-    }
+     }
     th, td {
-        padding: 8px;
+       padding: 10px; /* More padding in mobile */
     }
-    .species-container {
-        padding: 10px;
+   .species-container {
+        padding: 15px; /* More padding in smaller devices */
+    margin-bottom: 15px; /* Less margin in smaller devices */
     }
     .species-name {
-        margin-bottom: 10px;
-    }
-
+          margin-bottom: 15px;
+     }
     .species-name h2 {
-        font-size: 1.3em;
+       font-size: 1.5em; /* More text size for smaller mobile */
     }
+     .species-description{
+       padding-left: 10px; /* more padding left*/
+     }
+}
+
+/* List Styles */
+ul {
+    list-style-position: inside;
+     padding-left: 0;
 }
