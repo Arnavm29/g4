@@ -1,4 +1,6 @@
+/* style.css */
 
+/* Global styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f5eb;
@@ -23,10 +25,12 @@ html {
     padding: 0;
 }
 
+/* Shared max-width variable*/
 :root {
     --max-width: 700px;
 }
 
+/* Navigation Styles */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -77,6 +81,7 @@ html {
     text-overflow: ellipsis;
 }
 
+/* Content Styles */
 .content {
     width: 100%;
     max-width: var(--max-width);
@@ -90,6 +95,7 @@ html {
     justify-content: center;
 }
 
+/* Heading Styles */
 h3 {
     color: #5f745a;
     margin-bottom: 15px;
@@ -97,6 +103,7 @@ h3 {
     font-weight: 600;
 }
 
+/* Text Styles*/
 em {
     display: block;
     margin-bottom: 10px;
@@ -109,6 +116,7 @@ em strong {
 }
 
 
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -116,7 +124,7 @@ table {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: var(--max-width); 
+    max-width: var(--max-width);
     box-sizing: border-box;
     text-align: center;
 }
@@ -127,6 +135,7 @@ th, td {
     border-bottom: 1px solid #d6dac9;
 }
 
+/* Table header */
 thead {
     background-color: #d6dac9;
     color: #5f745a;
@@ -136,10 +145,12 @@ th {
     font-weight: 600;
 }
 
+/* Table body */
 tbody tr:nth-child(even) {
     background-color: #e1e6d3;
 }
 
+/* Table footer */
 tfoot {
     background-color: #d6dac9;
     font-style: italic;
@@ -151,7 +162,60 @@ tfoot td {
     padding: 15px;
 }
 
+/* Species Styles */
+.species-container {
+    width: 100%;
+    max-width: var(--max-width);
+    background-color: rgba(240, 245, 235, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
 
+.species-name {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.species-name h2 {
+    margin: 0;
+    color: #5f745a;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.species-content {
+    display: flex;
+    align-items: center; /* Vertically center items */
+     text-align: left;
+}
+
+.species-image {
+    flex: 1;
+    text-align: left;
+    order: -1;
+    display: flex;  /*Use flexbox to align the items to the middle */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.species-description {
+    flex: 2;
+    padding-left: 20px;
+    text-align: left;
+}
+
+
+.species-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     :root {
         --max-width: 95%;
@@ -160,37 +224,64 @@ tfoot td {
         padding: 10px;
         margin-bottom: 15px;
         align-items: center;
-
     }
 
     .nav-button {
-       font-size: 1em;
-       padding: 8px 12px;
+        font-size: 1em;
+        padding: 8px 12px;
         margin: 5px;
     }
 
-     .nav-text {
+    .nav-text {
         font-size: 1.1em;
         margin: 10px 0;
         text-align: center;
-     }
-   .content {
+    }
+    .content {
         padding: 20px;
-   }
+    }
     h3 {
         font-size: 1.4em;
     }
     em {
         font-size: 1em;
     }
-     table {
-         max-width: var(--max-width); 
-         font-size: 0.9em;
-         box-sizing: border-box; 
-     }
-      th, td {
-          padding: 10px;
-     }
+    table {
+        max-width: var(--max-width);
+        font-size: 0.9em;
+        box-sizing: border-box;
+    }
+    th, td {
+        padding: 10px;
+    }
+
+    .species-container {
+        padding: 15px;
+    }
+    .species-name {
+        margin-bottom: 15px;
+    }
+
+    .species-name h2 {
+        font-size: 1.5em;
+    }
+
+    .species-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .species-description {
+        padding-left: 0;
+        text-align: center;
+    }
+        .species-image {
+            text-align: center;
+            margin-top: 10px;
+            order: initial;
+             display: block;  /* Reset flex display for mobile */
+        }
+
 }
 
 @media (max-width: 480px){
@@ -198,24 +289,34 @@ tfoot td {
         --max-width: 98%;
     }
 
-      .nav-text {
+    .nav-text {
         font-size: 1em;
-     }
+    }
     .content {
         padding: 15px;
-   }
-      h3 {
+    }
+    h3 {
         font-size: 1.2em;
     }
-     em {
+    em {
         font-size: 0.9em;
     }
-      table {
-          max-width: var(--max-width); 
-         font-size: 0.8em;
-         box-sizing: border-box; 
-     }
-       th, td {
-          padding: 8px;
-     }
+    table {
+        max-width: var(--max-width);
+        font-size: 0.8em;
+        box-sizing: border-box;
+    }
+    th, td {
+        padding: 8px;
+    }
+    .species-container {
+        padding: 10px;
+    }
+    .species-name {
+        margin-bottom: 10px;
+    }
+
+    .species-name h2 {
+        font-size: 1.3em;
+    }
 }
